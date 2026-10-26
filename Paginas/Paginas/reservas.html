@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Reservas | Nombre de mi negocio</title>
+  <meta name="description" content="Reserva tu bicicleta: completa el formulario con tus datos, el tipo de bicicleta, la fecha y la forma de pago.">
+  <style>
+    body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+      text-align: center;
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+      padding: 16px;
+      border: 1px solid #2a7f62;
+      border-radius: 10px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #2a7f62;
+      padding: 0 8px;
+    }
+
+    label {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+      margin-top: 4px;
+    }
+
+    button {
+      background-color: #2a7f62;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 24px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head> <link rel="stylesheet" href="../Css/styles.css">
+<body>
+
+  <header>
+    <h1>Reservas</h1>
+    <nav>
+      <a href="../index.html" style="color: #1E7A4F;">Inicio</a> |
+      <a href="tarifas-recorridos.html" style="color: #1E7A4F;">Tarifas</a> |
+      <a href="tarifas-recorridos.html#recorridos" style="color: #1E7A4F;">Recorridos guiados</a> |
+    </nav>
+  </header>
+
+  <main>
+    <section id="formulario-reserva">
+      <h2>Formulario de reserva</h2>
+
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Tus datos</legend>
+
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu alquiler</legend>
+
+          <p>Tipo de bicicleta</p>
+
+          <input type="radio" id="tipo-urbana" name="tipo_bicicleta" value="urbana" required>
+          <label for="tipo-urbana">Urbana</label>
+
+          <input type="radio" id="tipo-montana" name="tipo_bicicleta" value="montana">
+          <label for="tipo-montana">Montaña</label>
+
+          <input type="radio" id="tipo-electrica" name="tipo_bicicleta" value="electrica">
+          <label for="tipo-electrica">Eléctrica</label>
+
+          <br>
+
+          <label for="fecha">Fecha del alquiler</label>
+          <input type="date" id="fecha" name="fecha" required>
+
+          <label for="dias">Número de días</label>
+          <input type="number" id="dias" name="dias" min="1" max="30" value="1" required>
+
+          <label for="pago">Forma de pago</label>
+          <select id="pago" name="pago" required>
+            <option value="">Selecciona una opción</option>
+            <option value="efectivo">Efectivo</option>
+            <option value="tarjeta">Tarjeta</option>
+            <option value="credito">Sistema de crédito</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Confirmación</legend>
+
+          <label for="comentarios">Comentarios o solicitudes especiales</label>
+          <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+          <p>
+            <input type="checkbox" id="condiciones" name="condiciones" value="acepto" required>
+            <label for="condiciones">Acepto las condiciones del alquiler</label>
+          </p>
+        </fieldset>
+
+        <button type="submit" name="enviar">Enviar reserva</button>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">Volver al inicio</a></p>
+    <p>&copy; 2026 Nombre de mi negocio. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
