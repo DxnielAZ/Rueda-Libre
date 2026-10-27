@@ -1,69 +1,158 @@
-
-body {
-    font-family: 'Open Sans', sans-serif;
+/* ===== Variables de la paleta del cliente ===== */
+:root {
+  --verde-ruta: #1E7A4F;
+  --naranja-pedal: #F39A2B;
+  --azul-noche: #14213D;
+  --crema: #FAF6EF;
+  --gris-asfalto: #5B6470;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-}
-
+/* ===== Base ===== */
 html {
-    width: 100%;
+  width: 100%;
 }
 
 body {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-
-img {
-
-display: block;
-margin: 0 auto;
- 
-
-}
-
-h1.titulo-RuedaLibre {
-    text-align: center;
-
-}
-
-p.descripcion {
-    text-align: center;
-}    
-
-
-h1.Tituloprincipal {
-
-    text-align: center;
-
-}
-
-
-body {
+  width: 90%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--crema);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+h1.titulo-RuedaLibre,
+h1.Tituloprincipal,
+p.descripcion {
+  text-align: center;
+}
+
+/* ===== Enlaces en general ===== */
+a {
+  color: var(--verde-ruta);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 3px;
+}
+
+/* ===== Menú ===== */
+#menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 16px 0;
+  padding: 0;
+}
+
+#menu a {
+  color: var(--gris-asfalto);
+}
+
+#menu a.activo {              /* (1,1,1) */
+  color: var(--verde-ruta);
+  font-weight: 600;
+}
+
+#menu a:hover {
+  color: var(--azul-noche);
+  text-decoration: underline;
+}
+
+#menu a:focus {
+  color: var(--azul-noche);
+  text-decoration: underline;
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 3px;
+}
+
+/* ===== Botón de llamada a la acción ===== */
+.btn-cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--naranja-pedal);
+  color: var(--azul-noche);
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--azul-noche);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cta:hover {
+  background-color: var(--azul-noche);
+  color: var(--crema);
+}
+
+.btn-cta:focus {
+  outline: 3px solid var(--verde-ruta);
+  outline-offset: 3px;
+}
+
+/* ===== Formulario ===== */
+fieldset {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid var(--verde-ruta);
+  border-radius: 10px;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--verde-ruta);
+  padding: 0 8px;
+}
+
+label {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 2px;
+}
+
+/* ===== Tablas ===== */
 table {
   margin: 20px auto;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid #2a7f62;
+  border: 1px solid var(--verde-ruta);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -76,7 +165,7 @@ caption {
 }
 
 thead th {
-  background-color: #2a7f62;
+  background-color: var(--verde-ruta);
   color: white;
   padding: 12px 16px;
 }
