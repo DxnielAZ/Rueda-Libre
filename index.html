@@ -5,54 +5,71 @@
 
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-<header>
-  <nav>
-    <ul id="menu">
-      <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
-      <li><a href="Paginas/tarifas-recorridos.html">Tarifas</a></li>
-      <li><a href="Paginas/reservas.html">Reservas</a></li>
-    </ul>
-  </nav>
-</header>
-
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../Css/styles.css">
+<link rel="stylesheet" href="Css/styles.css"
  
 </head> 
 
+<main>
 
-<h1 class="Tituloprincipal">Rueda Libre | Alquiler de bicicletas en Medellin
+ <header>
+  <nav>
+    <ul id="menu">
+      <li><a href="http://127.0.0.1:5500/index.html" class="activo" aria-current="page">Inicio</a></li>
+      <li><a href="http://127.0.0.1:5500/tarifas-recorridos.html">Tarifas</a></li>
+      <li><a href="http://127.0.0.1:5500/reservas.html">Reservas</a></li>
+    </ul>
+  </nav>
+</header> 
 
+<section class="portada">
+    <h1 class="Tituloprincipal">Rueda Libre | Alquiler de bicicletas en Medellín</h1>
+    <p class="descripcion">
+      Bienvenidos a Rueda Libre, la mejor tienda de alquiler en toda el área metropolitana.
+      ¿Quieres visitarnos? <a href="#encuentranos">Mira cómo llegar</a>.
+    </p>
+    <img src="Img/Ruta2.jpg" alt="Bicicleta" width="500" height="600">
+  </section>
 
-</h1>
+  <!-- ... ¿Quiénes somos? igual que antes ... -->
 
-<p class="descripcion">Bienvenidos a Rueda Libre, la mejor tienda de alquiler en toda el area metropolitana!</p>
+  <section id="servicios">
+    <h2>Nuestros servicios</h2>
 
+    <article class="tarjeta">
+      <img src="Img/Img.jpeg" alt="Bicicleta" width="500" height="600">
+      <h3>Venta de bicicletas</h3>
+      <p>
+        Tenemos bicicletas de montaña, de ruta y urbanas para cada tipo de ciclista.
+        Todas las bicicletas se entregan <strong>armadas, revisadas y con garantía</strong>,
+        y te ayudamos a elegir la talla <em>que mejor se adapte a ti</em>.
+      </p>
+    </article>
 
+    <article class="tarjeta">
+      <img src="Img/Ruta.jpeg" alt="Bicicleta" width="500" height="600">
+      <h3>Alquiler de bicicletas</h3>
+      <p>
+        Alquila una bicicleta por horas, días o semanas, ideal para pasear o
+        recorrer la ciudad. El alquiler <strong>incluye casco y candado</strong>,
+        así que solo tienes que preocuparte por <em>disfrutar el recorrido</em>.
+      </p>
+    </article>
 
-
-
-
-
-<h1 class="titulo-RuedaLibre">Rueda Libre</h1>
-
-<img src="Img/Bicicleta.jpg" alt="Bicicleta" width="500" height="600">     
-
-
-
-<section> <h2>¿Quienes Somos?</h2> </section>
-
-<p> Somos la mejor tienda de alquiler en el area metropolitana.
- </p>
-
-
-<section> <h2>Nuestros servicios</h2></section>
+    <article class="tarjeta">
+      <img src="Img/Tarjetas.jpg" alt="Credito" width="500" height="600">
+      <h3>Opciones de crédito</h3>
+      <p>
+        ¿Quieres tu bicicleta, pero prefieres pagarla poco a poco? Ofrecemos
+        <strong>planes de crédito con cuotas mensuales fijas</strong> y un
+        proceso sencillo de aprobación, <em>sin complicaciones ni letra pequeña</em>.
+      </p>
+    </article>
+  </section>
 
 
 
@@ -126,13 +143,28 @@
 </p>
 <p>
 
-Aqui puedes ecnontrarlos!
+Aqui puedes encontrarlos!
 
-<a href="http://127.0.0.1:5500/Paginas/tarifas-recorridos.html">Click Aqui</a>
+<a href="http://127.0.0.1:5500/reservas.html" class="btn-cta">Ver Tarifas</a>     
+
 
 
 </p>
 
+     <p>    Si deseas reservar aqui tendras la opcion!
+
+
+
+<a href="http://127.0.0.1:5500/reservas.html" class="btn-cta">Reservar ahora</a>
+    
+    
+    </p>
+</main>
+
+
+
+
+<footer>
 <!-- ... resto de la página ... -->
 
 <h2 id="encuentranos">Encuéntranos</h2>
@@ -146,7 +178,7 @@ Aqui puedes ecnontrarlos!
 <p>
   Escríbenos a <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.
 </p>
-
+</footer>
 
 
 

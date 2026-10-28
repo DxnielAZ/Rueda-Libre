@@ -1,10 +1,29 @@
-/* ===== Variables de la paleta del cliente ===== */
+/* ===== Variables ===== */
 :root {
+  /* Paleta del cliente */
   --verde-ruta: #1E7A4F;
   --naranja-pedal: #F39A2B;
   --azul-noche: #14213D;
   --crema: #FAF6EF;
   --gris-asfalto: #5B6470;
+  --blanco: #FFFFFF;
+  --borde-suave: #D9DEE3;
+
+  /* Escala de espaciado */
+  --espacio-1: 0.25rem;
+  --espacio-2: 0.5rem;
+  --espacio-3: 1rem;
+  --espacio-4: 1.5rem;
+  --espacio-5: 2rem;
+  --espacio-6: 3rem;
+
+  /* Esquinas redondeadas */
+  --radio: 0.75rem;
+}
+
+/* ===== Modelo de caja: el ancho incluye relleno y borde ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 /* ===== Base ===== */
@@ -13,14 +32,16 @@ html {
 }
 
 body {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+  margin: 0;
+  padding: var(--espacio-6);
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   background-color: var(--crema);
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,12 +51,46 @@ h1, h2, h3, h4, h5, h6 {
 img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 h1.titulo-RuedaLibre,
 h1.Tituloprincipal,
 p.descripcion {
   text-align: center;
+}
+
+/* ===== Portada de inicio ===== */
+.portada {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--espacio-1) var(--espacio-1);
+}
+
+/* ===== Tarjetas de servicios ===== */
+.tarjeta {
+  padding: var(--espacio-1);
+  margin-bottom: var(--espacio-4);
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radio);
+  background-color: var(--blanco);
+  text-align: left;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+.tarjeta img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: calc(var(--radio) / 2);
+  margin-bottom: var(--espacio-3);
 }
 
 /* ===== Enlaces en general ===== */
@@ -52,13 +107,13 @@ a:focus {
   outline-offset: 3px;
 }
 
-/* ===== Menú ===== */
+/* ===== Menú: opciones en fila ===== */
 #menu {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 24px;
-  margin: 16px 0;
+  gap: var(--espacio-4);
+  margin: var(--espacio-3) 0;
   padding: 0;
 }
 
@@ -86,9 +141,11 @@ a:focus {
 /* ===== Botón de llamada a la acción ===== */
 .btn-cta {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--naranja-pedal);
+  padding: var(--espacio-3) var(--espacio-5);
+  background-color: var(--crema);
   color: var(--azul-noche);
+  font-family: inherit;
+  font-size: 1em;
   font-weight: 700;
   text-decoration: none;
   border: 2px solid var(--azul-noche);
@@ -106,23 +163,37 @@ a:focus {
   outline-offset: 3px;
 }
 
+.btn-cta:active {
+  background-color: var(--azul-noche);
+  color: var(--crema);
+  transform: translateY(1px);
+}
+
 /* ===== Formulario ===== */
 fieldset {
-  margin-bottom: 20px;
-  padding: 16px;
+  margin: 0 0 var(--espacio-4);
+  padding: var(--espacio-4);
   border: 1px solid var(--verde-ruta);
-  border-radius: 10px;
+  border-radius: var(--radio);
+  text-align: left;
 }
 
 legend {
   font-weight: bold;
   color: var(--verde-ruta);
-  padding: 0 8px;
+  padding: 0 var(--espacio-2);
 }
 
 label {
+  display: block;
+  margin-top: var(--espacio-3);
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 0;
+  margin-right: var(--espacio-3);
 }
 
 input[type="text"],
@@ -134,9 +205,9 @@ select,
 textarea {
   display: block;
   width: 100%;
-  box-sizing: border-box;
-  padding: 8px;
-  margin-top: 4px;
+  padding: var(--espacio-2);
+  margin-top: var(--espacio-1);
+  font: inherit;
 }
 
 input:focus,
@@ -144,16 +215,21 @@ select:focus,
 textarea:focus {
   outline: 3px solid var(--azul-noche);
   outline-offset: 2px;
+  border-color: var(--verde-ruta);
+}
+
+form .btn-cta {
+  margin-top: var(--espacio-3);
 }
 
 /* ===== Tablas ===== */
 table {
-  margin: 20px auto;
+  margin: var(--espacio-4) auto;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--verde-ruta);
-  border-radius: 10px;
+  border-radius: var(--radio);
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -161,23 +237,23 @@ table {
 caption {
   font-size: 1.2em;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: var(--espacio-2);
+}
+
+th, td {
+  padding: var(--espacio-3) var(--espacio-4);
+  text-align: left;
+  border-bottom: 1px solid var(--borde-suave);
 }
 
 thead th {
   background-color: var(--verde-ruta);
-  color: white;
-  padding: 12px 16px;
+  color: var(--blanco);
+  border-bottom: none;
 }
 
 tbody th {
   background-color: #e3f2ec;
-  text-align: left;
-  padding: 10px 16px;
-}
-
-td {
-  padding: 10px 16px;
 }
 
 tbody tr:nth-child(even) td {
@@ -188,3 +264,10 @@ tbody tr:hover td,
 tbody tr:hover th {
   background-color: #ffe8a3;
 }
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
