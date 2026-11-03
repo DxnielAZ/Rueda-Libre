@@ -27,71 +27,134 @@
   </header>
 
   <main>
-    <h1>Reservas</h1>
-    <section id="formulario-reserva">
-      <h2>Formulario de reserva</h2>
+   <h1>Reservas</h1>
 
-      <form action="#" method="post">
+<section class="reservas-contenedor">
 
-        <fieldset>
-          <legend>Tus datos</legend>
+  <!-- ===== Formulario ===== -->
 
-          <label for="nombre">Nombre completo</label>
-          <input type="text" id="nombre" name="nombre" required>
+  <section id="formulario-reserva">
 
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" required>
+    <h2>Formulario de reserva</h2>
 
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" required>
-        </fieldset>
+    <form action="#" method="post">
 
-        <fieldset>
-          <legend>Tu alquiler</legend>
+      <fieldset>
+        <legend>Tus datos</legend>
 
-          <p>Tipo de bicicleta</p>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-          <input type="radio" id="tipo-urbana" name="tipo_bicicleta" value="urbana" required>
-          <label for="tipo-urbana">Urbana</label>
+        <!-- Dos campos en una misma fila -->
 
-          <input type="radio" id="tipo-montana" name="tipo_bicicleta" value="montana">
-          <label for="tipo-montana">Montaña</label>
+        <div class="campos-fila">
 
-          <input type="radio" id="tipo-electrica" name="tipo_bicicleta" value="electrica">
-          <label for="tipo-electrica">Eléctrica</label>
+          <div class="campo">
+            <label for="documento">Documento</label>
+            <input type="text" id="documento" name="documento" required>
+          </div>
 
-          <br>
+          <div class="campo">
+            <label for="telefono">Celular</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
 
-          <label for="fecha">Fecha del alquiler</label>
-          <input type="date" id="fecha" name="fecha" required>
+        </div>
 
-          <label for="dias">Número de días</label>
-          <input type="number" id="dias" name="dias" min="1" max="30" value="1" required>
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required>
 
-          <label for="pago">Forma de pago</label>
-          <select id="pago" name="pago" required>
-            <option value="">Selecciona una opción</option>
-            <option value="efectivo">Efectivo</option>
-            <option value="tarjeta">Tarjeta</option>
-            <option value="credito">Sistema de crédito</option>
-          </select>
-        </fieldset>
+      </fieldset>
 
-        <fieldset>
-          <legend>Confirmación</legend>
+      <fieldset>
+        <legend>Tu alquiler</legend>
 
-          <label for="comentarios">Comentarios o solicitudes especiales</label>
-          <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+        <p>Tipo de bicicleta</p>
 
-          <p>
-            <input type="checkbox" id="condiciones" name="condiciones" value="acepto" required>
-            <label for="condiciones">Acepto las condiciones del alquiler</label>
-          </p>
-        </fieldset>
+        <input type="radio" id="tipo-urbana" name="tipo_bicicleta" value="urbana" required>
+        <label for="tipo-urbana">Urbana</label>
 
-       <button type="submit" name="enviar" class="btn-cta">Enviar reserva</button>
-      </form>
-    </section>
+        <input type="radio" id="tipo-montana" name="tipo_bicicleta" value="montana">
+        <label for="tipo-montana">Montaña</label>
+
+        <input type="radio" id="tipo-electrica" name="tipo_bicicleta" value="electrica">
+        <label for="tipo-electrica">Eléctrica</label>
+
+        <br>
+
+        <label for="fecha">Fecha del alquiler</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="dias">Número de días</label>
+        <input type="number" id="dias" name="dias" min="1" max="30" value="1" required>
+
+        <label for="pago">Forma de pago</label>
+        <select id="pago" name="pago" required>
+          <option value="">Selecciona una opción</option>
+          <option value="efectivo">Efectivo</option>
+          <option value="tarjeta">Tarjeta</option>
+          <option value="credito">Sistema de crédito</option>
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Confirmación</legend>
+
+        <label for="comentarios">Comentarios o solicitudes especiales</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+        <p>
+          <input type="checkbox" id="condiciones" name="condiciones" value="acepto" required>
+          <label for="condiciones">Acepto las condiciones del alquiler</label>
+        </p>
+
+      </fieldset>
+
+      <button type="submit" name="enviar" class="btn-cta">
+        Enviar reserva
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- ===== Información de contacto ===== -->
+
+  <aside class="contacto-reserva">
+
+    <h2>Información de contacto</h2>
+
+    <p>
+      ¿Tienes preguntas sobre tu reserva?
+      Comunícate con nosotros.
+    </p>
+
+    <h3>Teléfono</h3>
+    <p>300 123 4567</p>
+
+    <h3>Correo electrónico</h3>
+    <p>hola@ruedalibre.example</p>
+
+    <h3>Ubicación</h3>
+    <p>Medellín, Colombia.</p>
+
+    <h3>Horario</h3>
+    <p>
+      8:00 a. m. - 12:00 m.<br>
+      3:00 p. m.
+    </p>
+
+    <a href="https://wa.me/573001234567"
+       class="btn-cta"
+       target="_blank"
+       rel="noopener noreferrer">
+       Contactar por WhatsApp
+    </a>
+
+  </aside>
+
+</section>
 
 
     <a href="https://wa.me/573001234567"
