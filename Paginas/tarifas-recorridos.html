@@ -1,137 +1,243 @@
 <!DOCTYPE html>
+
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarifas y recorridos | Nombre de mi negocio</title>
-  <meta name="description" content="Consulta las tarifas de alquiler y los recorridos guiados de Nombre de mi negocio: precios, duración y condiciones.">
+
+<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tarifas y recorridos | Rueda Libre</title>
+
+<meta name="description" content="Consulta las tarifas de alquiler y los recorridos guiados de Rueda Libre en Medellín.">
+
+<!-- Bootstrap 5.3.8 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+
+<!-- CSS personalizado -->
+<link rel="stylesheet" href="../Css/styles.css">
+
 
 </head>
+
 <body>
 
- <link rel="stylesheet" href="../Css/styles.css"> 
+<!-- ENCABEZADO -->
+<header class="container py-3">
 
-  <header>
-    
     <nav>
-  <ul id="menu">
-     <li><a href="../index.html" > Inicio </a></li>
-      <li><a href="tarifas-recorridos.html" class="activo" aria-current="page" >Tarifas</a></li>
-      <li><a href="reservas.html">Reservas</a></li>
-  </ul>
-</nav>
-  </header>
+        <ul id="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="tarifas-recorridos.html" class="activo" aria-current="page">Tarifas</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
 
-  <main>
-<p></p>
-    <img src="../Img/Ruta2.jpg" alt="Bicicleta" width="500" height="600">
-    <h1>Tarifas y recorridos</h1>
+</header>
 
-    <section id="tarifas-alquiler">
-      <h2>Tarifas de alquiler</h2>
-      <table>
-        <caption>Tarifas de alquiler de bicicletas</caption>
-        <thead>
-          <tr>
-            <th scope="col">Tipo de bicicleta</th>
-            <th scope="col">Por hora</th>
-            <th scope="col">Por día</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Urbana</th>
-            <td>$5.000</td>
-            <td>$25.000</td>
-          </tr>
-          <tr>
-            <th scope="row">Montaña</th>
-            <td>$8.000</td>
-            <td>$40.000</td>
-          </tr>
-          <tr>
-            <th scope="row">Eléctrica</th>
-            <td>$12.000</td>
-            <td>$60.000</td> 
-          </tr>
-        </tbody>
-      </table>
+
+<main class="container">
+
+    <!-- PORTADA -->
+    <section class="text-center my-4">
+
+        <img src="../Img/Ruta2.jpg"
+             alt="Bicicleta para recorrer Medellín"
+             class="img-fluid rounded"
+             width="500"
+             height="600">
+
+        <h1 class="my-4">Tarifas y recorridos</h1>
+
+        <p class="text-secondary">
+            Conoce nuestros precios de alquiler y descubre
+            los recorridos que tenemos preparados para ti.
+        </p>
+
     </section>
 
-    <section id="recorridos">
-      <h2>Recorridos guiados</h2>
-      <table>
-        <caption>Recorridos guiados disponibles</caption>
-        <thead>
-          <tr>
-            <th scope="col">Recorrido</th>
-            <th scope="col">Duración</th>
-            <th scope="col">Dificultad</th>
-            <th scope="col">Precio por persona</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Ruta del centro</th>
-            <td>2 horas</td>
-            <td>Fácil</td>
-            <td>$30.000</td>
-          </tr>
-          <tr>
-            <th scope="row">Ruta del río</th>
-            <td>3 horas</td>
-            <td>Media</td>
-            <td>$45.000</td>
-          </tr>
-          <tr>
-            <th scope="row">Ruta de montaña</th>
-            <td>5 horas</td>
-            <td>Difícil</td>
-            <td>$70.000</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
 
-    <section id="informacion-adicional">
-      <h2>Información adicional</h2>
+    <!-- TABLAS E INFORMACIÓN ADICIONAL -->
+    <div class="row g-4 my-4">
 
-      <h3>Casco y candado</h3>
-      <p>Todos los alquileres incluyen casco y candado sin costo adicional.</p>
+        <!-- COLUMNA DE TABLAS -->
+        <div class="col-12 col-lg-8">
 
-      <h3>Horarios de salida</h3>
-      <ul>
-        <li>Mañana: 8:00 a. m.</li>
-        <li>Mediodía: 12:00 m.</li>
-        <li>Tarde: 3:00 p. m.</li>
-      </ul>
+            <!-- TARIFAS DE ALQUILER -->
+            <section id="tarifas-alquiler" class="mb-5">
 
-      <h3>Qué llevar</h3>
-      <ul>
-        <li>Documento de identidad</li>
-        <li>Agua y protector solar</li>
-        <li>Ropa y calzado cómodos</li>
-        <li>Una chaqueta ligera por si llueve</li>
-      </ul>
-    </section>
+                <h2>Tarifas de alquiler</h2>
 
-    <a href="https://wa.me/573001234567" 
-    class="whatsapp-fijo"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="WhatsApp"
-    >WhatsApp</a>
+                <div class="table-responsive">
 
-  </main>
+                    <table>
 
-  <footer>
-    <p><a href="http://127.0.0.1:5500/index.html">Volver al inicio</a></p>
-    <p>&copy; 2026 Nombre de mi negocio. Todos los derechos reservados.</p>
-  </footer>
+                        <caption>Tarifas de alquiler de bicicletas</caption>
 
-</body>
-</html>
+                        <thead>
+                            <tr>
+                                <th scope="col">Tipo de bicicleta</th>
+                                <th scope="col">Por hora</th>
+                                <th scope="col">Por día</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <th scope="row">Urbana</th>
+                                <td>$5.000</td>
+                                <td>$25.000</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Montaña</th>
+                                <td>$8.000</td>
+                                <td>$40.000</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Eléctrica</th>
+                                <td>$12.000</td>
+                                <td>$60.000</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
 
 
+            <!-- RECORRIDOS GUIADOS -->
+            <section id="recorridos">
+
+                <h2>Recorridos guiados</h2>
+
+                <div class="table-responsive">
+
+                    <table>
+
+                        <caption>Recorridos guiados disponibles</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Recorrido</th>
+                                <th scope="col">Duración</th>
+                                <th scope="col">Dificultad</th>
+                                <th scope="col">Precio por persona</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <th scope="row">Ruta del centro</th>
+                                <td>2 horas</td>
+                                <td>Fácil</td>
+                                <td>$30.000</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Ruta del río</th>
+                                <td>3 horas</td>
+                                <td>Media</td>
+                                <td>$45.000</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Ruta de montaña</th>
+                                <td>5 horas</td>
+                                <td>Difícil</td>
+                                <td>$70.000</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </div>
 
 
+        <!-- COLUMNA DE INFORMACIÓN ADICIONAL -->
+        <div class="col-12 col-lg-4">
+
+            <section id="informacion-adicional">
+
+                <h2>Información adicional</h2>
+
+                <h3>Casco y candado</h3>
+
+                <p>
+                    Todos los alquileres incluyen casco y candado
+                    sin costo adicional para garantizar tu seguridad.
+                </p>
+
+
+                <h3>Horarios de salida</h3>
+
+                <ul>
+                    <li>Mañana: 8:00 a. m.</li>
+                    <li>Mediodía: 12:00 m.</li>
+                    <li>Tarde: 3:00 p. m.</li>
+                </ul>
+
+
+                <h3>Qué llevar</h3>
+
+                <ul>
+                    <li>Documento de identidad.</li>
+                    <li>Agua y protector solar.</li>
+                    <li>Ropa y calzado cómodos.</li>
+                    <li>Una chaqueta ligera por si llueve.</li>
+                </ul>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/573001234567"
+       class="whatsapp-fijo"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+
+        WhatsApp
+
+    </a>
+
+</main>
+
+
+<!-- PIE DE PÁGINA -->
+<footer class="container mt-5 py-4 border-top">
+
+    <p>
+        <a href="../index.html">Volver al inicio</a>
+    </p>
+
+    <p class="text-secondary">
+        &copy; 2026 Rueda Libre. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+</script>
+
+
+</body> </html>
