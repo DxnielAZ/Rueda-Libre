@@ -1,0 +1,173 @@
+/* =========================================
+
+VARIABLES ========================================= */
+
+:root { --verde-ruta: #1E7A4F; --naranja-pedal: #F39A2B; --azul-noche: #14213D; --crema: #FAF6EF; --gris-asfalto: #5B6470; --blanco: #FFFFFF; --borde-suave: #D9DEE3;
+
+/* Espaciado */ --espacio-1: 0.25rem; --espacio-2: 0.5rem; --espacio-3: 1rem; --espacio-4: 1.5rem; --espacio-5: 2rem; --espacio-6: 3rem;
+
+/* Bordes */ --radio: 0.75rem; }
+
+/* =========================================
+
+ESTILOS GENERALES ========================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { width: 100%; }
+
+body { margin: 0; font-family: 'Open Sans', sans-serif; background-color: var(--crema); text-align: center; color: var(--azul-noche); }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+
+img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+
+a { color: var(--verde-ruta); }
+
+a:hover { text-decoration: none; }
+
+a:focus { outline: 3px solid var(--azul-noche); outline-offset: 3px; }
+
+/* =========================================
+
+ENCABEZADO Y MENÚ ========================================= */
+
+header { padding: var(--espacio-3) 0; border-bottom: 1px solid var(--borde-suave); }
+
+.marca { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--azul-noche); text-decoration: none; }
+
+#menu { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--espacio-3); list-style: none; margin: 0; padding: 0; }
+
+#menu a { color: var(--gris-asfalto); text-decoration: none; }
+
+#menu a.activo { color: var(--verde-ruta); font-weight: 700; }
+
+#menu a:hover { color: var(--azul-noche); text-decoration: underline; }
+
+#menu a:focus { outline: 3px solid var(--azul-noche); outline-offset: 3px; }
+
+/* =========================================
+
+TARJETAS ========================================= */
+
+.tarjeta { padding: var(--espacio-3); border: 1px solid var(--borde-suave); border-radius: var(--radio); background-color: var(--blanco); text-align: left; }
+
+.tarjeta h3 { margin-top: 0; }
+
+.tarjeta img { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: calc(var(--radio) / 2); margin-bottom: var(--espacio-3); }
+
+/* =========================================
+
+BOTONES PERSONALIZADOS ========================================= */
+
+.btn-cta { display: inline-block; padding: var(--espacio-3) var(--espacio-4); background-color: var(--crema); color: var(--azul-noche); font-family: inherit; font-size: 1em; font-weight: 700; text-decoration: none; border: 2px solid var(--azul-noche); border-radius: 8px; cursor: pointer; text-align: center; }
+
+.btn-cta:hover { background-color: var(--azul-noche); color: var(--crema); }
+
+.btn-cta:focus { outline: 3px solid var(--verde-ruta); outline-offset: 3px; }
+
+.btn-cta:active { transform: translateY(1px); }
+
+/* =========================================
+
+MODELOS Y PRECIOS ========================================= */
+
+.modelo h3 { margin-bottom: var(--espacio-2); }
+
+.modelo-desc { margin-bottom: var(--espacio-3); }
+
+.precio { margin: 0 0 var(--espacio-3); font-size: 1.25rem; font-weight: 700; color: var(--verde-ruta); }
+
+/* =========================================
+
+RUTAS ========================================= */
+
+.ruta-card h3 { color: var(--verde-ruta); }
+
+.ruta-card p { line-height: 1.6; }
+
+/* =========================================
+
+FORMULARIOS ========================================= */
+
+fieldset { margin: 0 0 var(--espacio-4); padding: var(--espacio-3); border: 1px solid var(--verde-ruta); border-radius: var(--radio); text-align: left; min-width: 0; }
+
+legend { font-weight: bold; color: var(--verde-ruta); padding: 0 var(--espacio-2); }
+
+label { display: block; margin-top: var(--espacio-3); }
+
+/* Radio buttons y casillas */
+
+input[type="radio"] + label, input[type="checkbox"] + label { display: inline-block; margin-top: 0; margin-right: var(--espacio-2); }
+
+/* Estados de los campos Bootstrap */
+
+.form-control:focus, .form-select:focus { outline: 3px solid var(--azul-noche); outline-offset: 2px; border-color: var(--verde-ruta); box-shadow: none; }
+
+form .btn-cta { margin-top: var(--espacio-3); }
+
+/* =========================================
+
+TABLAS DE TARIFAS ========================================= */
+
+table { width: 100%; margin: var(--espacio-4) auto; border-collapse: collapse; table-layout: fixed; border: 1px solid var(--verde-ruta); border-radius: var(--radio); font-size: 0.75rem; }
+
+caption { font-size: 1rem; font-weight: bold; margin-bottom: var(--espacio-2); }
+
+th, td { padding: 0.4rem 0.25rem; text-align: center; border-bottom: 1px solid var(--borde-suave); overflow-wrap: anywhere; }
+
+thead th { background-color: var(--verde-ruta); color: var(--blanco); border-bottom: none; }
+
+tbody th { background-color: #e3f2ec; }
+
+tbody tr:nth-child(even) td { background-color: #f5f5f5; }
+
+tbody tr:hover td, tbody tr:hover th { background-color: #ffe8a3; }
+
+tbody tr:last-child th, tbody tr:last-child td { border-bottom: none; }
+
+/* =========================================
+
+INFORMACIÓN ADICIONAL ========================================= */
+
+#informacion-adicional { background-color: var(--blanco); padding: var(--espacio-4); margin-top: var(--espacio-5); border: 1px solid var(--borde-suave); border-radius: var(--radio); text-align: left; }
+
+#informacion-adicional h2 { color: var(--azul-noche); }
+
+#informacion-adicional h3 { color: var(--verde-ruta); }
+
+/* =========================================
+
+INFORMACIÓN DE RESERVAS ========================================= */
+
+#formulario-reserva { min-width: 0; }
+
+.contacto-reserva { padding: var(--espacio-4); background-color: var(--blanco); border: 1px solid var(--borde-suave); border-radius: var(--radio); text-align: left; }
+
+.contacto-reserva h2 { color: var(--azul-noche); }
+
+.contacto-reserva h3 { color: var(--verde-ruta); margin-bottom: var(--espacio-1); }
+
+.contacto-reserva p { color: var(--gris-asfalto); line-height: 1.6; }
+
+/* =========================================
+
+WHATSAPP ========================================= */
+
+.whatsapp-fijo { position: fixed; right: 15px; bottom: 15px; z-index: 9999;
+
+background-color: #25d366; color: var(--blanco); padding: 12px 16px; border-radius: 30px;
+
+font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; text-decoration: none;
+
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease; }
+
+.whatsapp-fijo:hover { background-color: #128c7e; color: var(--blanco); }
+
+/* =========================================
+
+PIE DE PÁGINA ========================================= */
+
+.pie-bloque h2 { font-size: 1.1rem; }
+
+.derechos { color: var(--gris-asfalto); }

@@ -1,0 +1,6 @@
+http://127.0.0.1:5500/index.html
+Metodo de peticion GET
+Status 304 Not Modifed 
+Path /index.html
+Protocol http/1.1
+	
